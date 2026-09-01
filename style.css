@@ -323,6 +323,79 @@ footer { background: var(--black); color: white; padding: 35px 0; }
   line-height: 0.95;
   white-space: nowrap;
 }
+/* =========================================================
+   SIMPLE CONTACT SECTION
+   ========================================================= */
+
+.contact-simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.contact-heading h2 {
+  margin-bottom: 20px;
+}
+
+.contact-heading p {
+  max-width: 550px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.contact-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.contact-item:hover {
+  padding-left: 8px;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c41e2a;
+}
+
+.contact-item span:last-child {
+  text-align: right;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .contact-simple {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contact-item span:last-child {
+    text-align: left;
+  }
+}
 /* COUNCILMAN TITLE */
 .hero-text-box .office {
   white-space: nowrap;
